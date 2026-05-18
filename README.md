@@ -1,6 +1,8 @@
 # FigureCode
 MMA code on common figure plotting
 
+### Uniform Figure style
+
 tend = (2 \[Pi] n + \[Pi]/2)/\[Omega]; 
 
  Plot[{x0, x1, \[Delta]x}, {t, 0, tend}, Frame -> True, 
@@ -14,3 +16,8 @@ tend = (2 \[Pi] n + \[Pi]/2)/\[Omega];
  FrameStyle -> Directive[Black(*,Thickness[0.003]*)], 
  LabelStyle -> Directive[ Black, Bold, FontSize -> 13], 
  AspectRatio -> 2/3, ImageSize -> Medium]
+
+ ### add horizon line in plot
+
+ Plot[Cos[t], {t, 0, 10}, GridLines -> {None, {-1, -0.5, 0, 0.5, 1}}, 
+ GridLinesStyle -> Directive[Dashed, Gray]]
