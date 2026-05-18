@@ -21,3 +21,10 @@ tend = (2 \[Pi] n + \[Pi]/2)/\[Omega];
 
  Plot[Cos[t], {t, 0, 10}, GridLines -> {None, {-1, -0.5, 0, 0.5, 1}}, 
  GridLinesStyle -> Directive[Dashed, Gray]]
+
+### add the Legend in figure (contorl the position and frame of legend)
+
+Plot[{Sin[x], Cos[x]}, {x, 0, 2 \[Pi]}, PlotStyle -> {Blue, Red}, 
+ PlotLegends -> 
+  Placed[LineLegend["Expressions", LegendFunction -> "Frame", 
+    LegendLayout -> "Column"], {{0.7, 1}, {0.5, 1}}]]
