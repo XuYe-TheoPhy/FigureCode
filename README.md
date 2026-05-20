@@ -43,6 +43,17 @@ Plot[{Sin[x], Cos[x]}, {x, 0, 2 \[Pi]}, PlotStyle -> {Blue, Red},
 
 ### change the tick for y axis
 
+## first plot the two figure, then add the legend
+
+p1 = ParametricPlot[{Cos[t], Sin[t]}, {t, 0, 2 Pi}, PlotStyle -> Red, 
+   PlotRange -> {{-1.4, 1.4}, {-1.4, 1.4}}, Frame -> True];
+p2 = ParametricPlot[{1.2 Cos[t], 1.2 Sin[t]}, {t, 0, 2 Pi}, 
+   PlotStyle -> Blue];
+
+Legended[Show[p1, p2], 
+ Placed[LineLegend[{Red, Blue}, {"orbit 1", "orbit 2"}, 
+   LegendFunction -> Framed], {0.5, 0.5}]]
+
 Plot[Sin[x], {x, 0, 2 Pi}, PlotRange -> {-\[Pi], \[Pi]}, 
  Ticks -> {Automatic, {{0, "0"}, {Pi/4, "\[Pi]/4"}, {Pi/2, 
      "\[Pi]/2"}, {3 Pi/4, "3\[Pi]/4"}, {Pi, "\[Pi]"}}}]
