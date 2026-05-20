@@ -1,7 +1,7 @@
 # FigureCode
 MMA code on common figure plotting
 
-### Figure style for Plot
+## Figure style for Plot
 
  Plot[{x0, x1, \\[Delta]x}, {t, 0, tend}, Frame -> True, 
  AxesOrigin -> {0, 0}, PlotRange -> {-1.2, 2.4}, 
@@ -15,7 +15,7 @@ MMA code on common figure plotting
  LabelStyle -> Directive[ Black, Bold, FontSize -> 13], 
  AspectRatio -> 2/3, ImageSize -> Medium]
 
- ### 2D ParametricPlot Style
+ ## 2D ParametricPlot Style
 
  ParametricPlot[{{r1 Cos[\[Phi]1], r1 Sin[\[Phi]1]}, {r0 Cos[\[Phi]0], 
    r0 Sin[\[Phi]0]}}, {t, 0, 50}, PlotRange -> All, 
